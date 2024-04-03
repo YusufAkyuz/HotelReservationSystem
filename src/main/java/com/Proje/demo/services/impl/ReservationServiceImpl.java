@@ -80,7 +80,7 @@ public class ReservationServiceImpl implements ReservationService {
         Optional<UserInfo> userOptional = userService.findById(userId);
 
         // Eğer kullanıcı bulunamazsa veya e-posta adresi null ise varsayılan bir değer döndürebiliriz
-        return userOptional.map(UserInfo::getMail).orElse("default@example.com");
+        return userOptional.map(UserInfo::getUsername).orElse("default@example.com");
 
         // Veya eğer kullanıcı bulunamazsa istisna fırlatabiliriz
         //return userOptional.map(User::getMail).orElseThrow(() -> new IllegalStateException("User not found with id: " + userId));

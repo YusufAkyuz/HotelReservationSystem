@@ -15,24 +15,27 @@ public class UserInfo {
     @Column(name = "user_id")
     private long id;
     @Column(name = "user_mail")
-    private String mail;
+    private String username;
     @Column(name = "user_password")
     private String password;
+    @Column(name = "user_role")
+    private String role;
 
     public UserInfo() {
 
     }
-    public UserInfo(String mail, String password) {
-        this.mail = mail;
+    public UserInfo(String username, String password,String role) {
+        this.username = username;
         this.password = password;
+        this.role = role;
     }
 
-    public String getMail() {
-        return mail;
+    public String getUsername() {
+        return username;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setUsername(String mail) {
+        this.username = mail;
     }
 
     public String getPassword() {
@@ -41,5 +44,13 @@ public class UserInfo {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
