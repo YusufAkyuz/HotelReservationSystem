@@ -1,6 +1,5 @@
 package com.Proje.demo.email;
 
-
 import com.Proje.demo.model.MailStructure;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

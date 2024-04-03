@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // geçmişini takip etmenin ve dağıtmanın etkili bir yoludur.
 
 public interface LocationRepository extends JpaRepository<LocationInfo, Long> {
+
 }

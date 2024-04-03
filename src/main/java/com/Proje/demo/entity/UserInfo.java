@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "UserInfo")
 public class UserInfo {
@@ -24,7 +26,7 @@ public class UserInfo {
     public UserInfo() {
 
     }
-    public UserInfo(String username, String password,String role) {
+    public UserInfo(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
@@ -53,4 +55,5 @@ public class UserInfo {
     public void setRole(String role) {
         this.role = role;
     }
+
 }

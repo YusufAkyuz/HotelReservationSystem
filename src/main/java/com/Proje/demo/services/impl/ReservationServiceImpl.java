@@ -1,6 +1,7 @@
 package com.Proje.demo.services.impl;
 
 import com.Proje.demo.email.MailService;
+import com.Proje.demo.entity.LocationInfo;
 import com.Proje.demo.entity.ReservationInfo;
 import com.Proje.demo.entity.UserInfo;
 import com.Proje.demo.model.MailStructure;
@@ -60,6 +61,7 @@ public class ReservationServiceImpl implements ReservationService {
     public ReservationInfo updateReservation(ReservationInfo reservationInfo) {
         return reservationRepository.save(reservationInfo);
     }
+
 
     @Override
     public void deleteReservation(Long id) {

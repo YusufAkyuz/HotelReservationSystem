@@ -1,6 +1,7 @@
 package com.Proje.demo.services;
 
 import com.Proje.demo.entity.AdminInfo;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,4 +15,5 @@ public interface AdminService {
     AdminInfo saveAdmin(AdminInfo adminInfo);
     AdminInfo updateAdmin(AdminInfo adminInfo);
     void deleteLocation(Long id);
+    AdminInfo loadByUsername(String username) throws UsernameNotFoundException;
 }

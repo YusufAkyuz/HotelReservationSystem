@@ -17,6 +17,7 @@ public class ReservationInfo {
     @Column(name = "rezervation_location_id")
     private Long locationId;
 
+
     public ReservationInfo() {
     }
 

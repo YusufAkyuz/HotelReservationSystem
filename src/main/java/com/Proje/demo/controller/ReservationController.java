@@ -3,6 +3,7 @@ package com.Proje.demo.controller;
 
 import com.Proje.demo.entity.ReservationInfo;
 import com.Proje.demo.services.ReservationService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/reservation")
+@PreAuthorize("hasRole('ADMIN')")
 public class ReservationController {
 
     private final ReservationService reservationService;
