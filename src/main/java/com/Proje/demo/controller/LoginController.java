@@ -55,14 +55,19 @@ public class LoginController {
         emailService.sendMail(mail, mailStructure);
         return ResponseEntity.ok("Successful Process");
     }
-    /*
-    @GetMapping("/user/{userId}/reservations")
+/*
+@GetMapping("/user/{userId}/reservations")
     @PreAuthorize("hasRole('USER') || hasRole('ADMIN')")
     public ResponseEntity<List<ReservationInfo>> getUserReservations(@PathVariable("userId") Long userId) {
-        List<ReservationInfo> userReservations = reservationService.getUserReservations(userId);
-        return ResponseEntity.ok(userReservations);
+
     }
-*/
+ */
 
-
+    /*
+    @PostMapping("/register/user")
+    public MyUser createUser(@RequestBody MyUser user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+    }
+     */
 }

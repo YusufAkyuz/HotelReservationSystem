@@ -1,5 +1,7 @@
 package com.Proje.demo.security;
 
+import com.Proje.demo.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -20,6 +22,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
+
+    /*
+    @Autowired
+    private UserService userService;
+     */
+
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -57,4 +65,20 @@ public class SecurityConfig {
                 .httpBasic(Customizer.withDefaults());
         return security.build();
     }
+
+
+    /*
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return userDetailService;
+    }
+
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setUserDetailsService(userDetailService);
+        provider.setPasswordEncoder(passwordEncoder());
+        return provider;
+    }
+     */
 }
