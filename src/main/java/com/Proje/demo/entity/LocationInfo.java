@@ -15,7 +15,7 @@ public class LocationInfo {
     @Column(name = "location_adress")
     private String address;
     @Column(name = "location_telephone")
-        private String telephone;
+    private String telephone;
 
     public LocationInfo() {
     }
